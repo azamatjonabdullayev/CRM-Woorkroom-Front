@@ -2,90 +2,120 @@ import React from "react";
 import { Link } from "react-router-dom";
 import projectIcon from "../assets/projects-icon.svg";
 import MessangerIcon from "../assets/MessangerIcons.svg";
+import supportImg from "../assets/support.svg";
 import { RxDashboard } from "react-icons/rx";
 import { IoCalendarClear } from "react-icons/io5";
 import { FaPlaneUp } from "react-icons/fa6";
 import { MdPeopleAlt } from "react-icons/md";
 import { FaRegFolderOpen } from "react-icons/fa";
+import { BiMessageRounded } from "react-icons/bi";
+import { FiLogOut } from "react-icons/fi";
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="h-full max-w-[200px] bg-white rounded-3xl w-full border border-[red]">
-      <Link to={"login"} className="w-full cursor-pointer flex items-start ">
-        <img src="/logo.svg" alt="logo" />
-      </Link>
+    <aside className="h-full max-w-60 w-full bg-white rounded-3xl flex flex-col p-6 font-[Nunito]">
+      {/* Logo */}
+      <div className="mb-8">
+        <Link to={"login"} className="w-full cursor-pointer block">
+          <img src="/logo.svg" alt="logo" className="w-[50px] h-[50px]" />
+        </Link>
+      </div>
 
-      <ul className="font-[Nunito] font-bold text-lg text-[#7D8592] border border-green-600">
-        <li className="rounded-[10px]">
-          <Link
-            to={"/"}
-            className="flex items-center justify-center gap-4 h-11"
-          >
-            <RxDashboard className="size-6" />
-            <span>Dashboard</span>
-          </Link>
-        </li>
+      {/* Navigation Menu */}
+      <nav className="flex-1">
+        <ul className="font-[Nunito] font-semibold text-base text-[#7D8592] space-y-2">
+          <li>
+            <Link
+              to={"/"}
+              className="flex items-center gap-4 h-12 px-4 rounded-xl  transition-all duration-200 hover:bg-gray-50"
+            >
+              <RxDashboard className="w-5 h-5" />
+              <span>Dashboard</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"projects"}
+              className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
+            >
+              <img src={projectIcon} alt="projects" className="w-5 h-5" />
+              <span>Projects</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"calendar"}
+              className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
+            >
+              <IoCalendarClear className="w-5 h-5" />
+              <span>Calendar</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"vacations"}
+              className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
+            >
+              <FaPlaneUp className="w-5 h-5" />
+              <span>Vacations</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"employees"}
+              className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
+            >
+              <MdPeopleAlt className="w-5 h-5" />
+              <span>Employees</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"messenger"}
+              className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
+            >
+              <img
+                src={MessangerIcon}
+                alt="MessengerIcon"
+                className="w-5 h-5"
+              />
+              <span>Messenger</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"info-portal"}
+              className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
+            >
+              <FaRegFolderOpen className="w-5 h-5" />
+              <span>Info Portal</span>
+            </Link>
+          </li>
+        </ul>
+      </nav>
 
-        <li className="rounded-[10px] ">
-          <Link
-            to={"projects"}
-            className="flex items-center justify-center gap-4 h-11"
-          >
-            <img src={projectIcon} alt="projects" className="size-6" />
-            <span>Projects</span>
-          </Link>
-        </li>
+      {/* Support Section */}
+      <div className="mt-auto mb-6">
+        <div className="w-full bg-[#EBF3FF] rounded-2xl p-4 relative">
+          <img
+            src={supportImg}
+            alt="support"
+            className="absolute -top-12 right-2 w-24 h-24 object-contain z-0"
+          />
+          <div className="relative z-10 pt-6">
+            <button className="w-full h-12 text-white font-semibold flex items-center justify-center gap-2 bg-[#3F8CFF] rounded-xl hover:bg-[#2D7AE6] transition-colors duration-200">
+              <BiMessageRounded className="w-5 h-5" />
+              <span>Support</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-        <li className="rounded-[10px] ">
-          <Link
-            to={"calendar"}
-            className="flex items-center justify-center gap-4 h-11"
-          >
-            <IoCalendarClear className="size-6" />
-            <span>Calendar</span>
-          </Link>
-        </li>
-
-        <li className="rounded-[10px] ">
-          <Link
-            to={"vacations"}
-            className="flex items-center justify-center gap-4 h-11"
-          >
-            <FaPlaneUp className="size-6" />
-            <span>Vacations</span>
-          </Link>
-        </li>
-
-        <li className="rounded-[10px] ">
-          <Link
-            to={"employees"}
-            className="flex items-center justify-center gap-4 h-11"
-          >
-            <MdPeopleAlt />
-            <span>Employees</span>
-          </Link>
-        </li>
-
-        <li className="rounded-[10px] ">
-          <Link
-            to={"messagenger"}
-            className="flex items-center justify-center gap-4 h-11"
-          >
-            <img src={MessangerIcon} alt="MessangerIcon" className="size-6" />
-            <span>Messanger</span>
-          </Link>
-        </li>
-
-        <li className="rounded-[10px] ">
-          <Link
-            to={"info-portal"}
-            className="flex items-center justify-center gap-4 h-11"
-          >
-            <FaRegFolderOpen className="size-6" />
-            <span>Info Portal</span>
-          </Link>
-        </li>
-      </ul>
+      {/* Logout Button */}
+      <button className="text-[#7D8592] font-semibold flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200">
+        <FiLogOut className="w-5 h-5" />
+        <span>Logout</span>
+      </button>
     </aside>
   );
 };
