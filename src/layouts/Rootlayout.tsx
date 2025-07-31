@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar";
 
 const Rootlayout: React.FC = () => {
   return (
-    <div className="flex">
+    <div className="flex p-5 gap-[30px] items-center h-screen bg-[#f4f9fd] ">
       <Sidebar />
       <div className="">
         <Header />
