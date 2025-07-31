@@ -18,6 +18,10 @@ export const AllRoutes = createBrowserRouter([
             index: true,
             element: <DashboardPage />,
           },
+          {
+            path: "projects",
+            element: <h1>These are projeeeeeects</h1>,
+          },
         ],
       },
 

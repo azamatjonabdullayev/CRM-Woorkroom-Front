@@ -7,7 +7,7 @@ const Rootlayout: React.FC = () => {
   return (
     <div className="flex p-5 gap-[30px] items-center h-screen bg-[#f4f9fd] ">
       <Sidebar />
-      <div className="">
+      <div className="flex-1 flex flex-col gap-[50px]">
         <Header />
         <main>
           <Outlet />

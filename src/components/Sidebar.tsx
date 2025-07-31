@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
     <aside className="h-full max-w-60 w-full bg-white rounded-3xl flex flex-col p-6 font-[Nunito]">
       {/* Logo */}
       <div className="mb-8">
-        <Link to={"login"} className="w-full cursor-pointer block">
+        <Link to={"/"} className="w-full cursor-pointer block">
           <img src="/logo.svg" alt="logo" className="w-[50px] h-[50px]" />
         </Link>
       </div>
