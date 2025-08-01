@@ -1,5 +1,4 @@
 import React, { type JSX } from "react";
-import avatar from "../assets/avaterPhoto.svg";
 import { IoSearch } from "react-icons/io5";
 import { FiBell } from "react-icons/fi";
 
