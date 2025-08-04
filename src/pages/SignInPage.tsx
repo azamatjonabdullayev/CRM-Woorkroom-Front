@@ -9,10 +9,13 @@ const SignInPage: React.FC = (): JSX.Element => {
   return (
     <div className="flex items-center h-screen w-screen px-10 py-5 bg-[#f4f9fd]">
       <section className="left-section w-1/2 h-full bg-[#3f8cff] flex flex-col justify-around items-center rounded-tl-4xl rounded-bl-4xl">
-        <div className="logo-container flex items-center w-fit gap-6 text-white">
+        <Link
+          to={"/"}
+          className="logo-container flex items-center w-fit gap-6 text-white"
+        >
           <img src={logo} alt="logo" />
           <span className="text-3xl font-bold">Woorkroom</span>
-        </div>
+        </Link>
 
         <p className="font-bold text-[40px] text-white">
           Your place to work

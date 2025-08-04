@@ -35,7 +35,7 @@ const Sidebar: React.FC = () => {
           </li>
           <li>
             <Link
-              to={"projects"}
+              to={"/projects"}
               className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
             >
               <img src={projectIcon} alt="projects" className="w-5 h-5" />
@@ -44,7 +44,7 @@ const Sidebar: React.FC = () => {
           </li>
           <li>
             <Link
-              to={"calendar"}
+              to={"/calendar"}
               className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
             >
               <IoCalendarClear className="w-5 h-5" />
@@ -53,7 +53,7 @@ const Sidebar: React.FC = () => {
           </li>
           <li>
             <Link
-              to={"vacations"}
+              to={"/vacations"}
               className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
             >
               <FaPlaneUp className="w-5 h-5" />
@@ -62,7 +62,7 @@ const Sidebar: React.FC = () => {
           </li>
           <li>
             <Link
-              to={"employees"}
+              to={"/employees"}
               className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
             >
               <MdPeopleAlt className="w-5 h-5" />
@@ -71,7 +71,7 @@ const Sidebar: React.FC = () => {
           </li>
           <li>
             <Link
-              to={"messenger"}
+              to={"/messenger"}
               className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
             >
               <img
@@ -84,7 +84,7 @@ const Sidebar: React.FC = () => {
           </li>
           <li>
             <Link
-              to={"info-portal"}
+              to={"/info-portal"}
               className="flex items-center gap-4 h-12 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200"
             >
               <FaRegFolderOpen className="w-5 h-5" />

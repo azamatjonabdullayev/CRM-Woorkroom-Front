@@ -19,8 +19,28 @@ export const AllRoutes = createBrowserRouter([
             element: <DashboardPage />,
           },
           {
-            path: "projects",
+            path: "/projects",
             element: <h1>These are projeeeeeects</h1>,
+          },
+          {
+            path: "/calendar",
+            element: <h1>These are calendar</h1>,
+          },
+          {
+            path: "/vacations",
+            element: <h1>These are vacations</h1>,
+          },
+          {
+            path: "/employees",
+            element: <h1>These are employees</h1>,
+          },
+          {
+            path: "/messenger",
+            element: <h1>These are messenger</h1>,
+          },
+          {
+            path: "/info-portal",
+            element: <h1>These are info-portal</h1>,
           },
         ],
       },
