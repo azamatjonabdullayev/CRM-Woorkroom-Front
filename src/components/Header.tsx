@@ -25,16 +25,14 @@ const Header: React.FC = (): JSX.Element => {
           name="example"
         >
           <option
-            className="flex items-center justify-center"
+            className="flex items-center justify-center font-extrabold text-base"
             value="option1"
-            selected
+            defaultValue={"Evan Yetes"}
           >
-            <span className="font-extrabold text-base">Evan Yetes</span>
+            Evan Yetes
           </option>
 
-          <option value="2">
-            <span>Select-ni tog'ri qila olmadim!</span>
-          </option>
+          <option value="2">Select-ni tog'ri qila olmadim!</option>
         </select>
       </div>
     </header>
